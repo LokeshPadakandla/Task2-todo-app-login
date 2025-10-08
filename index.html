@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>To-Do App with Login & Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <div class="login-container" id="loginPage">
+    <h2>📝 Welcome to My To-Do App</h2>
+    <p class="intro">
+      Stay organized and productive every day!<br>
+      Login to manage your personal To-Do list, add tasks, and track progress.
+    </p>
+    <input type="text" id="username" placeholder="Enter your email">
+    <input type="password" id="password" placeholder="Enter password">
+    <button id="loginBtn">Login</button>
+    <p id="loginMsg"></p>
+    <p class="link">New user? <span id="showSignup">Create an account</span></p>
+  </div>
+
+  <!-- SIGNUP PAGE -->
+  <div class="login-container" id="signupPage" style="display:none;">
+    <h2>Create Account</h2>
+    <p class="intro">Sign up to start your To-Do journey!</p>
+    <input type="text" id="newUsername" placeholder="Enter your email">
+    <input type="password" id="newPassword" placeholder="Choose password">
+    <button id="signupBtn">Sign Up</button>
+    <p id="signupMsg"></p>
+    <p class="link">Already have an account? <span id="showLogin">Login here</span></p>
+  </div>
+
+  <!-- TODO PAGE -->
+  <div class="todo-container" id="todoPage" style="display:none;">
+    <div class="header">
+      <h2>My To-Do List</h2>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Enter a new task...">
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search tasks...">
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
