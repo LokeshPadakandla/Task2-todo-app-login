@@ -153,17 +153,32 @@ li.completed {
 html {
   -webkit-text-size-adjust: 100%;
 }
-@media (max-width: 480px) {
-  .input-section input[type="text"] {
-    flex: 1;
-    padding: 12px;
+/* ✅ Fix Add Task box size on mobile screens */
+@media (max-width: 600px) {
+  #taskInput {
+    width: 100%;
     font-size: 16px;
+    padding: 12px;
   }
 
-  .input-section button {
-    padding: 12px;
+  #addBtn {
     font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .input-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #taskList li {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
+
+
 
 
