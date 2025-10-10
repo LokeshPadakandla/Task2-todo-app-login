@@ -153,3 +153,17 @@ li.completed {
 html {
   -webkit-text-size-adjust: 100%;
 }
+@media (max-width: 480px) {
+  .input-section input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .input-section button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+
