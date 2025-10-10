@@ -102,7 +102,26 @@ li.completed {
   text-decoration: line-through;
   color: gray;
 }
-/*  For small screens (mobiles below 480px) */
+
+/* === Fix for mobile Add Task box & long text overflow === */
+.input-section input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  font-size: 16px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+li .task-text {
+  flex: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* Responsive for mobile screens */
 @media (max-width: 480px) {
   .login-container, .todo-container {
     width: 90%;
@@ -131,6 +150,27 @@ li.completed {
     margin-top: 10px;
     width: 100%;
   }
+
+  .input-section {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input-section input[type="text"],
+  .input-section button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li button {
+    margin-top: 6px;
+  }
 }
 
 /* For very small phones (below 350px) */
@@ -150,34 +190,11 @@ li.completed {
     left: 15px;
   }
 }
+
 html {
   -webkit-text-size-adjust: 100%;
 }
-/* ✅ Fix Add Task box size on mobile screens */
-@media (max-width: 600px) {
-  #taskInput {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px;
-  }
 
-  #addBtn {
-    font-size: 16px;
-    padding: 12px;
-    width: 100%;
-    margin-top: 8px;
-  }
-
-  .input-section {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  #taskList li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
 
 
 
